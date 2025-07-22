@@ -1,0 +1,47 @@
+<h1><%= t("user.new.title") %></h1>
+
+<%= form_with model: @user, local: true do |f| %>
+  <div class="form-group">
+    <%= f.label :name, t("user.attributes.name") %>
+    <%= f.text_field :name, class: "form-control" %>
+    <% if @user.errors[:name].any? %>
+      <div class="error"><%= @user.errors[:name].join(", ") %></div>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, t("user.attributes.email") %>
+    <%= f.email_field :email, class: "form-control" %>
+    <% if @user.errors[:email].any? %>
+      <div class="error"><%= @user.errors[:email].join(", ") %></div>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password, t("user.attributes.password") %>
+    <%= f.password_field :password, class: "form-control" %>
+    <% if @user.errors[:password].any? %>
+      <div class="error"><%= @user.errors[:password].join(", ") %></div>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password_confirmation, t("user.attributes.password_confirmation") %>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
+    <% if @user.errors[:password_confirmation].any? %>
+      <div class="error"><%= @user.errors[:password_confirmation].join(", ") %></div>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.label :subdomain, t("user.attributes.subdomain") %>
+    <%= f.text_field :subdomain, class: "form-control" %>
+    <% if @user.errors[:subdomain].any? %>
+      <div class="error"><%= @user.errors[:subdomain].join(", ") %></div>
+    <% end %>
+  </div>
+  <div class="form-group">
+    <%= f.label :birthday, t("user.attributes.birthday") %>
+    <%= f.date_field :birthday, class: "form-control" %>
+    <% if @user.errors[:birthday].any? %>
+      <div class="error"><%= @user.errors[:birthday].join(", ") %></div>
+    <% end %>
+  </div>
+  <%= f.submit t("user.new.submit"), class: "btn btn-primary" %>
+<% end %>

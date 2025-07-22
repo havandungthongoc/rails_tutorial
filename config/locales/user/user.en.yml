@@ -1,0 +1,31 @@
+en:
+  user:
+    validations:
+      name:
+        presence: 'Name cannot be blank'
+        too_long: 'Name cannot be longer than %{count} characters'
+      email:
+        presence: 'Email cannot be blank'
+        format: 'Email format is invalid'
+        uniqueness: 'Email has already been taken'
+      password:
+        length: 'Password must be between %{min} and %{max} characters'
+      subdomain:
+        exclusion: 'Subdomain %{value} is reserved'
+      birthday:
+        invalid: 'Birthday must be within the last 100 years'
+    new:
+      title: 'Sign up'
+      submit: 'Create my account'
+    index:
+      title: 'Users list'
+    create:
+      success: 'Account created successfully'
+    not_found: 'User not found'
+    attributes:
+      name: 'Name'
+      email: 'Email'
+      password: 'Password'
+      password_confirmation: 'Password confirmation'
+      subdomain: 'Subdomain'
+      birthday: 'Birthday'

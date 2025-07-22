@@ -1,0 +1,31 @@
+vi:
+  user:
+    validations:
+      name:
+        presence: 'Tên không được để trống'
+        too_long: 'Tên không được dài quá %{count} ký tự'
+      email:
+        presence: 'Email không được để trống'
+        format: 'Email không đúng định dạng'
+        uniqueness: 'Email đã được sử dụng'
+      password:
+        length: 'Mật khẩu phải có độ dài từ %{min} đến %{max} ký tự'
+      subdomain:
+        exclusion: 'Subdomain %{value} không được phép sử dụng'
+      birthday:
+        invalid: 'Ngày sinh phải trong vòng 100 năm trở lại đây'
+    new:
+      title: 'Đăng ký tài khoản'
+      submit: 'Tạo tài khoản'
+    index:
+      title: 'Danh sách người dùng'
+    create:
+      success: 'Tạo tài khoản thành công'
+    not_found: 'Không tìm thấy người dùng'
+    attributes:
+      name: 'Tên'
+      email: 'Email'
+      password: 'Mật khẩu'
+      password_confirmation: 'Xác nhận mật khẩu'
+      subdomain: 'Subdomain'
+      birthday: 'Ngày sinh'

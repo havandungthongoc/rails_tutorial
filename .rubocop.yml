@@ -553,3 +553,12 @@ Rails/ScopeArgs:
 Rails/Validation:
   Include:
     - app/models/**/*.rb
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Layout/EndOfLine:
+  AutoCorrect: true
+Layout/SpaceBeforeBlockBraces:
+  Enabled: true
+Layout/TrailingEmptyLines:
+  Enabled: true
