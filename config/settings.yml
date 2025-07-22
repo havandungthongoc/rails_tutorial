@@ -1,0 +1,8 @@
+user:
+  name_max_length: 255
+  password_min_length: 6
+  password_max_length: 20
+  valid_email_regex: '\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z'
+  reserved_subdomains: ['www', 'us', 'ca', 'jp']
+  birthday_range_start: '1925-07-22'
+  birthday_range_end: '2025-07-22'

@@ -1,0 +1,44 @@
+/* Form styles */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.form-group .error {
+  color: red;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+/* Table styles */
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+}
