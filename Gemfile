@@ -43,8 +43,8 @@ gem "tzinfo-data", platforms: %i(mingw mswin x64_mingw jruby)
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-gem "sassc-rails"
 gem "bootstrap", "~> 5.3.2"
+gem "sassc-rails"
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html]
@@ -77,4 +77,4 @@ group :test do
 end
 
 # For application configuration
-gem 'config'
+gem "config"
