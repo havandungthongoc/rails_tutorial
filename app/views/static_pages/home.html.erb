@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= Settings.static_pages.home.title %> | <%= Settings.app_name %></title>
+  </head>
+  <body>
+    <h1><%= Settings.static_pages.home.header %></h1>
+
+    <p>
+      <%= Settings.static_pages.home.description %>
+      <%= link_to Settings.static_pages.home.tutorial_link_text, Settings.static_pages.home.tutorial_link_url %>
+      <%= Settings.static_pages.home.sample_app_text %>
+    </p>
+  </body>
+</html>
