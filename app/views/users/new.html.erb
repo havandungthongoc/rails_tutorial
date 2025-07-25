@@ -1,0 +1,50 @@
+<h1>Register User</h1>
+
+<% if @user.errors.any? %>
+  <div id="error_explanation" class="form-error-summary">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with model: @user, url: register_path, local: true do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: ("input #{"input-error" if @user.errors[:name].any?}") %>
+    <% @user.errors[:name].each do |msg| %>
+      <div class="field-error"><%= msg %></div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.email_field :email, class: ("input #{"input-error" if @user.errors[:email].any?}") %>
+    <% @user.errors[:email].each do |msg| %>
+      <div class="field-error"><%= msg %></div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.password_field :password, class: ("input #{"input-error" if @user.errors[:password].any?}") %>
+    <% @user.errors[:password].each do |msg| %>
+      <div class="field-error"><%= msg %></div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirmation" %><br>
+    <%= f.password_field :password_confirmation, class: ("input #{"input-error" if @user.errors[:password_confirmation].any?}") %>
+    <% @user.errors[:password_confirmation].each do |msg| %>
+      <div class="field-error"><%= msg %></div>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Register", class: "btn-register" %>
+  </div>
+<% end %>

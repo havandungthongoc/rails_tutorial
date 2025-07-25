@@ -2,3 +2,58 @@
 body {
   padding-top: 60px;
 }
+
+.notice {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.input-error {
+  border-color: #e3342f;
+  background-color: #fff5f5;
+}
+
+.field-error {
+  color: #e3342f;
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: -2px;
+}
+
+.form-error-summary {
+  border: 1px solid #e3342f;
+  background: #fff5f5;
+  color: #e3342f;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.btn-register {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-register:hover {
+  background: #0056b3;
+}
