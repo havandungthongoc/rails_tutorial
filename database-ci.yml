@@ -8,6 +8,6 @@ default: &default
 
 test:
   <<: *default
-  database: db-test
-  username: user-test
-  password: password-test
+  database: rails_tutorial_development
+  username: root
+  password: password
