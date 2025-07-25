@@ -12,6 +12,7 @@ static_pages:
     tutorial_link_text: "Ruby on Rails Tutorial"
     tutorial_link_url: "http://www.railstutorial.org/"
     sample_app_text: "sample application."
+    register_text: "Register"
   help:
     title: "Help"
     header: "Help"

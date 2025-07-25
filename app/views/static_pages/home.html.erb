@@ -10,7 +10,8 @@
       <%= Settings.static_pages.home.description %>
       <%= link_to Settings.static_pages.home.tutorial_link_text, Settings.static_pages.home.tutorial_link_url %>
       <%= Settings.static_pages.home.sample_app_text %>
-      <%= link_to "Register", register_path %>
+      <%= link_to Settings.static_pages.home.register_text, register_path %>
+      <%= link_to "List", users_path, class: "btn btn-primary" %>
     </p>
   </body>
 </html>

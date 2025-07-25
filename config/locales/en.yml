@@ -43,3 +43,44 @@ en:
       book: "Ruby on Rails Tutorial"
       book_em: true
       book_link: "book"
+  users:
+    index:
+      title: "Users List"
+      name: "Name"
+      email: "Email"
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+      confirm_delete: "Are you sure?"
+    show:
+      title: "User Detail"
+      email: "Email"
+      back_to_list: "Back to List"
+    new:
+      title: "Register User"
+      errors_count: "%{count} error prohibited this user from being saved:"
+    edit:
+      title: "Edit User"
+      errors_count: "%{count} error prohibited this user from being saved:"
+      password_hint: "(Leave blank if you don't want to change password)"
+      submit: "Update"
+      back: "Back"
+    form:
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Confirmation"
+      submit: "Register"
+    create:
+      success: "Register successfully!"
+    update:
+      success: "User updated successfully!"
+    destroy:
+      success: "User deleted successfully!"
+  errors:
+    messages:
+      blank: "can't be blank"
+      too_long: "is too long (maximum is %{count} characters)"
+      too_short: "is too short (minimum is %{count} characters)"
+      invalid: "is invalid"
+      taken: "has already been taken"

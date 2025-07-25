@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get "/contact", to: "static_pages#contact", as: :contact
     get "register", to: "users#new"
     post "register", to: "users#create"
+    resources :users
 
     # resources :microposts (removed because no controller exists)
   end

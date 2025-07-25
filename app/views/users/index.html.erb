@@ -1,0 +1,21 @@
+<h1><%= t("users.index.title") %></h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t("users.index.name") %></th>
+      <th><%= t("users.index.email") %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to t("users.index.show"), user_path(user), class: "btn btn-info btn-sm" %></td>
+        <td><%= link_to t("users.index.edit"), edit_user_path(user), class: "btn btn-warning btn-sm" %></td>
+        <td><%= link_to t("users.index.delete"), user_path(user), method: :delete, data: { confirm: t("users.index.confirm_delete") }, class: "btn btn-danger btn-sm" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table> 

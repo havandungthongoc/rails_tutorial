@@ -1,0 +1,8 @@
+<h1><%= t("users.show.title") %></h1>
+<div class="card" style="max-width: 400px; margin: 0 auto;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @user.name %></h5>
+    <p class="card-text"><strong><%= t("users.show.email") %>:</strong> <%= @user.email %></p>
+    <%= link_to t("users.show.back_to_list"), users_path, class: "btn btn-secondary" %>
+  </div>
+</div> 
