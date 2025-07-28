@@ -7,10 +7,10 @@
     <h1><%= Settings.static_pages.help.header %></h1>
 
     <p>
-      <%= t('static_pages.help.get_help') %>
-      <%= link_to t('static_pages.help.help_link'), Settings.static_pages.help.help_link_url %>.
-      <%= t('static_pages.help.more_help') %>
-      <%= link_to (Settings.static_pages.help.book_em ? content_tag(:em, t('static_pages.help.book')) : t('static_pages.help.book')), Settings.static_pages.help.book_link_url %>.
+      <%= t("static_pages.help.get_help") %>
+      <%= link_to t("static_pages.help.help_link"), Settings.static_pages.help.help_link_url %>.
+      <%= t("static_pages.help.more_help") %>
+      <%= link_to (Settings.static_pages.help.book_em ? content_tag(:em, t("static_pages.help.book")) : t("static_pages.help.book")), Settings.static_pages.help.book_link_url %>.
     </p>
   </body>
 </html>

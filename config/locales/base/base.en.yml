@@ -1,0 +1,20 @@
+en:
+  navbar:
+    home: "Home"
+    help: "Help"
+    contact: "Contact"
+  static_pages:
+    help:
+      get_help: "Get help on the Ruby on Rails Tutorial at the"
+      help_link: "Rails Tutorial help page"
+      more_help: "To get help on this sample app, see the"
+      book: "Ruby on Rails Tutorial"
+      book_em: true
+      book_link: "book"
+  errors:
+    messages:
+      blank: "can't be blank"
+      too_long: "is too long (maximum is %{count} characters)"
+      too_short: "is too short (minimum is %{count} characters)"
+      invalid: "is invalid"
+      taken: "has already been taken" 

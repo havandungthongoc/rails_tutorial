@@ -1,0 +1,20 @@
+vi:
+  navbar:
+    home: "Trang chủ"
+    help: "Trợ giúp"
+    contact: "Liên hệ"
+  static_pages:
+    help:
+      get_help: "Nhận trợ giúp về Ruby on Rails Tutorial tại"
+      help_link: "Trang trợ giúp Rails Tutorial"
+      more_help: "Để nhận trợ giúp về ứng dụng mẫu này, xem tại"
+      book: "Ruby on Rails Tutorial"
+      book_em: true
+      book_link: "sách"
+  errors:
+    messages:
+      blank: "không được để trống"
+      too_long: "quá dài (tối đa %{count} ký tự)"
+      too_short: "quá ngắn (tối thiểu %{count} ký tự)"
+      invalid: "không hợp lệ"
+      taken: "đã được sử dụng" 
