@@ -1,0 +1,14 @@
+<h1><%= t("users.new.title") %></h1>
+
+<% if @user.errors.any? %>
+  <div id="error_explanation" class="form-error-summary">
+    <h2><%= t("users.new.errors_count", count: @user.errors.count) %></h2>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= render "form", user: @user %>

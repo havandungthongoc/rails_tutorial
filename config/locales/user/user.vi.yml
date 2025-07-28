@@ -1,0 +1,58 @@
+vi:
+  users:
+    index:
+      title: "Danh sách người dùng"
+      name: "Tên"
+      email: "Email"
+      show: "Xem"
+      edit: "Sửa"
+      delete: "Xóa"
+      confirm_delete: "Bạn có chắc chắn muốn xóa?"
+    show:
+      title: "Chi tiết người dùng"
+      email: "Email"
+      back_to_list: "Quay lại danh sách"
+    new:
+      title: "Đăng ký người dùng"
+      errors_count: "%{count} lỗi ngăn không cho lưu người dùng này:"
+    edit:
+      title: "Sửa người dùng"
+      errors_count: "%{count} lỗi ngăn không cho lưu người dùng này:"
+      password_hint: "(Để trống nếu không muốn đổi mật khẩu)"
+      submit: "Cập nhật"
+      back: "Quay lại"
+    form:
+      name: "Tên"
+      email: "Email"
+      password: "Mật khẩu"
+      password_confirmation: "Xác nhận mật khẩu"
+      submit: "Đăng ký"
+    create:
+      success: "Đăng ký thành công!"
+    update:
+      success: "Cập nhật người dùng thành công!"
+    destroy:
+      success: "Xóa người dùng thành công!"
+  activerecord:
+    models:
+      user: "Người dùng"
+    attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "không được để trống"
+              too_long: "quá dài (tối đa %{count} ký tự)"
+            email:
+              blank: "không được để trống"
+              too_long: "quá dài (tối đa %{count} ký tự)"
+              invalid: "không hợp lệ"
+              taken: "đã được sử dụng"
+            password:
+              blank: "không được để trống"
+              too_short: "quá ngắn (tối thiểu %{count} ký tự)" 
