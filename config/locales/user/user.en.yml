@@ -8,6 +8,7 @@ en:
       edit: "Edit"
       delete: "Delete"
       confirm_delete: "Are you sure?"
+      actions: "Actions"
     show:
       title: "User Detail"
       email: "Email"

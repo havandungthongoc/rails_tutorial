@@ -9,15 +9,17 @@ class User < ApplicationRecord
   before_save :downcase_email
 
   validates :name, presence: true,
-                   length: { maximum: MAX_NAME_LENGTH }
+                   length: {maximum: MAX_NAME_LENGTH}
   validates :email, presence: true,
-                    length: { maximum: MAX_EMAIL_LENGTH },
-                    format: { with: VALID_EMAIL_REGEX },
-                    uniqueness: { case_sensitive: false }
+                    length: {maximum: MAX_EMAIL_LENGTH},
+                    format: {with: VALID_EMAIL_REGEX},
+                    uniqueness: {case_sensitive: false}
   # TODO: Add unique index for email in DB for full safety
   validates :password, presence: true,
-                       length: { minimum: MIN_PASSWORD_LENGTH },
+                       length: {minimum: MIN_PASSWORD_LENGTH},
                        allow_nil: true
+
+  scope :recent, -> { order(created_at: :desc) }
 
   private
 
