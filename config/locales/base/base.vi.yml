@@ -3,6 +3,11 @@ vi:
     home: "Trang chủ"
     help: "Trợ giúp"
     contact: "Liên hệ"
+    login: "Đăng nhập"
+    register: "Đăng ký"
+    users: "Người dùng"
+    profile: "Hồ sơ"
+    log_out: "Đăng xuất"
   static_pages:
     help:
       get_help: "Nhận trợ giúp về Ruby on Rails Tutorial tại"
@@ -17,4 +22,6 @@ vi:
       too_long: "quá dài (tối đa %{count} ký tự)"
       too_short: "quá ngắn (tối thiểu %{count} ký tự)"
       invalid: "không hợp lệ"
-      taken: "đã được sử dụng" 
+      taken: "đã được sử dụng"
+  log_in: "Đăng nhập"
+  invalid_email_password_combination: "Kết hợp email/mật khẩu không hợp lệ"
