@@ -3,6 +3,11 @@ en:
     home: "Home"
     help: "Help"
     contact: "Contact"
+    login: "Log in"
+    register: "Register"
+    users: "Users"
+    profile: "Profile"
+    log_out: "Log out"
   static_pages:
     help:
       get_help: "Get help on the Ruby on Rails Tutorial at the"
@@ -17,4 +22,6 @@ en:
       too_long: "is too long (maximum is %{count} characters)"
       too_short: "is too short (minimum is %{count} characters)"
       invalid: "is invalid"
-      taken: "has already been taken" 
+      taken: "has already been taken"
+  log_in: "Log in"
+  invalid_email_password_combination: "Invalid email/password combination"

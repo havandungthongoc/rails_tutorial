@@ -19,7 +19,7 @@ class User < ApplicationRecord
                        length: {minimum: MIN_PASSWORD_LENGTH},
                        allow_nil: true
 
-  scope :recent, -> { order(created_at: :desc) }
+  scope :recent, ->{order(created_at: :desc)}
 
   private
 
