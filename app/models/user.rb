@@ -14,12 +14,28 @@ class User < ApplicationRecord
                     length: {maximum: MAX_EMAIL_LENGTH},
                     format: {with: VALID_EMAIL_REGEX},
                     uniqueness: {case_sensitive: false}
-  # TODO: Add unique index for email in DB for full safety
   validates :password, presence: true,
                        length: {minimum: MIN_PASSWORD_LENGTH},
                        allow_nil: true
 
   scope :recent, ->{order(created_at: :desc)}
+
+  attr_accessor :remember_token
+
+  def remember
+    self.remember_token = SecureRandom.urlsafe_base64
+    update_attribute(:remember_digest, Digest::SHA1.hexdigest(remember_token))
+  end
+
+  def authenticated? remember_token
+    return false if remember_digest.nil?
+
+    Digest::SHA1.hexdigest(remember_token) == remember_digest
+  end
+
+  def forget
+    update_column(:remember_digest, nil)
+  end
 
   private
 
