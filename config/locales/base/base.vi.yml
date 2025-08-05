@@ -23,5 +23,26 @@ vi:
       too_short: "quá ngắn (tối thiểu %{count} ký tự)"
       invalid: "không hợp lệ"
       taken: "đã được sử dụng"
+  users:
+    new:
+      title: "Đăng ký"
+      name: "Tên"
+      email: "Email"
+      password: "Mật khẩu"
+      password_confirmation: "Xác nhận mật khẩu"
+      submit: "Đăng ký"
+      success: "Đăng ký thành công!"
+      errors_count: "%{count} lỗi:"
+      login: "Đăng nhập"
+  sessions:
+    new:
+      title: "Đăng nhập"
+      email: "Email"
+      password: "Mật khẩu"
+      remember_me: "Nhớ tôi"
+      submit: "Đăng nhập"
+      success: "Đăng nhập thành công!"
+      invalid_credentials: "Kết hợp email/mật khẩu không hợp lệ"
+      logged_out: "Đã đăng xuất!"
   log_in: "Đăng nhập"
   invalid_email_password_combination: "Kết hợp email/mật khẩu không hợp lệ"
