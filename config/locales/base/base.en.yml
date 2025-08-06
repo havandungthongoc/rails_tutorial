@@ -39,6 +39,12 @@ en:
       previous: "Previous"
       next: "Next"
       page: "Page %{current} of %{total}"
+      activated: "Activation Status"
+      activated_true: "Activated"
+      activated_false: "Not Activated"
+      activate: "Activate"
+      no_activation_token: "No activation token available"
+      clear: "Clear" # Thêm cho nút xóa (nếu dùng)
     new:
       title: "Sign up"
       name: "Name"
@@ -51,6 +57,7 @@ en:
       login: "Log in"
     create:
       success: "Account created successfully!"
+      activation_email_sent: "Please check your email to activate your account."
     update:
       success: "Profile updated successfully!"
       failed: "Profile update failed. Please check again."
@@ -70,6 +77,23 @@ en:
       success: "Log in successful!"
       invalid_credentials: "Invalid email/password combination"
       logged_out: "Logged out!"
+    create:
+      account_not_activated: "Account not activated. Check your email for the activation link."
     please_login: "Please log in."
+  account_activations:
+    success: "Account activated!"
+    invalid_link: "Invalid activation link"
   log_in: "Log in"
   invalid_email_password_combination: "Invalid email/password combination"
+  mailers:
+    user_mailer:
+      account_activation:
+        subject: "Account Activation"
+        greeting: "Hi %{name},"
+        instruction: "Please click the link below to activate your account:"
+        activate: "Activate"
+  account_activations:
+    success: "Account activated!"
+    invalid_token: "Invalid activation token"
+    user_not_found: "User not found"
+    already_activated: "Account already activated"
