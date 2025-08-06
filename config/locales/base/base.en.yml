@@ -24,6 +24,21 @@ en:
       invalid: "is invalid"
       taken: "has already been taken"
   users:
+    index:
+      title: "All users"
+      name: "Name"
+      email: "Email"
+      actions: "Actions"
+      show: "View"
+      edit: "Edit"
+      delete: "Delete"
+      confirm_delete: "Are you sure you want to delete this user?"
+      new_user: "Create new user"
+      search: "Search"
+      search_placeholder: "Search by name or email"
+      previous: "Previous"
+      next: "Next"
+      page: "Page %{current} of %{total}"
     new:
       title: "Sign up"
       name: "Name"
@@ -34,6 +49,17 @@ en:
       success: "Sign up successful!"
       errors_count: "%{count} errors:"
       login: "Log in"
+    create:
+      success: "Account created successfully!"
+    update:
+      success: "Profile updated successfully!"
+      failed: "Profile update failed. Please check again."
+    destroy:
+      success: "User deleted successfully!"
+      failed: "Failed to delete user."
+    not_found: "User not found."
+    access_denied: "You do not have permission to edit this account."
+    admin_only: "Only administrators can perform this action."
   sessions:
     new:
       title: "Log in"
@@ -44,6 +70,6 @@ en:
       success: "Log in successful!"
       invalid_credentials: "Invalid email/password combination"
       logged_out: "Logged out!"
+    please_login: "Please log in."
   log_in: "Log in"
   invalid_email_password_combination: "Invalid email/password combination"
-  
