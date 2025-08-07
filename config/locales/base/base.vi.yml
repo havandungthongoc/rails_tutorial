@@ -1,75 +1,111 @@
 vi:
   navbar:
-    home: "Trang chủ"
-    help: "Trợ giúp"
-    contact: "Liên hệ"
-    login: "Đăng nhập"
-    register: "Đăng ký"
-    users: "Người dùng"
-    profile: "Hồ sơ"
-    log_out: "Đăng xuất"
+    home: 'Trang chủ'
+    help: 'Trợ giúp'
+    contact: 'Liên hệ'
+    login: 'Đăng nhập'
+    register: 'Đăng ký'
+    users: 'Người dùng'
+    profile: 'Hồ sơ'
+    log_out: 'Đăng xuất'
   static_pages:
     help:
-      get_help: "Nhận trợ giúp về Ruby on Rails Tutorial tại"
-      help_link: "Trang trợ giúp Rails Tutorial"
-      more_help: "Để nhận trợ giúp về ứng dụng mẫu này, xem tại"
-      book: "Ruby on Rails Tutorial"
+      get_help: 'Nhận trợ giúp về Ruby on Rails Tutorial tại'
+      help_link: 'Trang trợ giúp Rails Tutorial'
+      more_help: 'Để nhận trợ giúp về ứng dụng mẫu này, xem tại'
+      book: 'Ruby on Rails Tutorial'
       book_em: true
-      book_link: "sách"
+      book_link: 'sách'
   errors:
     messages:
-      blank: "không được để trống"
-      too_long: "quá dài (tối đa %{count} ký tự)"
-      too_short: "quá ngắn (tối thiểu %{count} ký tự)"
-      invalid: "không hợp lệ"
-      taken: "đã được sử dụng"
+      blank: 'không được để trống'
+      too_long: 'quá dài (tối đa %{count} ký tự)'
+      too_short: 'quá ngắn (tối thiểu %{count} ký tự)'
+      invalid: 'không hợp lệ'
+      taken: 'đã được sử dụng'
+      confirmation: 'không khớp'
+  activerecord:
+    errors:
+      messages:
+        blank: 'không được để trống'
+        too_long: 'quá dài (tối đa %{count} ký tự)'
+        too_short: 'quá ngắn (tối thiểu %{count} ký tự)'
+        invalid: 'không hợp lệ'
+        taken: 'đã được sử dụng'
+        confirmation: 'không khớp'
+      models:
+        user:
+          attributes:
+            name:
+              blank: 'không được để trống'
+            email:
+              blank: 'không được để trống'
+              taken: 'đã được sử dụng'
+              invalid: 'không đúng định dạng'
+            password:
+              blank: 'không được để trống'
+              too_short: 'phải có ít nhất %{count} ký tự'
+            password_confirmation:
+              confirmation: 'không trùng khớp với mật khẩu'
+              blank: 'không được để trống'
   users:
     index:
-      title: "Tất cả người dùng"
-      name: "Tên"
-      email: "Email"
-      actions: "Hành động"
-      show: "Xem"
-      edit: "Chỉnh sửa"
-      delete: "Xóa"
-      confirm_delete: "Bạn có chắc muốn xóa người dùng này?"
-      new_user: "Tạo người dùng mới"
-      search: "Tìm kiếm"
-      search_placeholder: "Tìm kiếm theo tên hoặc email"
-      previous: "Trang trước"
-      next: "Trang sau"
-      page: "Trang %{current} / %{total}"
+      title: 'Tất cả người dùng'
+      name: 'Tên'
+      email: 'Email'
+      actions: 'Hành động'
+      show: 'Xem'
+      edit: 'Chỉnh sửa'
+      delete: 'Xóa'
+      confirm_delete: 'Bạn có chắc muốn xóa người dùng này?'
+      new_user: 'Tạo người dùng mới'
+      search: 'Tìm kiếm'
+      search_placeholder: 'Tìm kiếm theo tên hoặc email'
+      previous: 'Trang trước'
+      next: 'Trang sau'
+      page: 'Trang %{current} / %{total}'
     new:
-      title: "Đăng ký"
-      name: "Tên"
-      email: "Email"
-      password: "Mật khẩu"
-      password_confirmation: "Xác nhận mật khẩu"
-      submit: "Đăng ký"
-      success: "Đăng ký thành công!"
-      errors_count: "%{count} lỗi:"
-      login: "Đăng nhập"
+      title: 'Đăng ký'
+      name: 'Tên'
+      email: 'Email'
+      password: 'Mật khẩu'
+      password_confirmation: 'Xác nhận mật khẩu'
+      submit: 'Đăng ký'
+      success: 'Đăng ký thành công!'
+      errors_count: '%{count} lỗi:'
+      login: 'Đăng nhập'
     create:
-      success: "Tạo tài khoản thành công!"
+      success: 'Tạo tài khoản thành công!'
+      activation_email_sent: 'Vui lòng kiểm tra email để kích hoạt tài khoản của bạn.'
     update:
-      success: "Cập nhật hồ sơ thành công!"
-      failed: "Cập nhật hồ sơ thất bại. Vui lòng kiểm tra lại."
+      success: 'Cập nhật hồ sơ thành công!'
+      failed: 'Cập nhật hồ sơ thất bại. Vui lòng kiểm tra lại.'
     destroy:
-      success: "Xóa người dùng thành công!"
-      failed: "Không thể xóa người dùng."
-    not_found: "Không tìm thấy người dùng."
-    access_denied: "Bạn không có quyền chỉnh sửa tài khoản này."
-    admin_only: "Chỉ quản trị viên mới có thể thực hiện hành động này."
+      success: 'Xóa người dùng thành công!'
+      failed: 'Không thể xóa người dùng.'
+    not_found: 'Không tìm thấy người dùng.'
+    access_denied: 'Bạn không có quyền chỉnh sửa tài khoản này.'
+    admin_only: 'Chỉ quản trị viên mới có thể thực hiện hành động này.'
   sessions:
     new:
-      title: "Đăng nhập"
-      email: "Email"
-      password: "Mật khẩu"
-      remember_me: "Nhớ tôi"
-      submit: "Đăng nhập"
-      success: "Đăng nhập thành công!"
-      invalid_credentials: "Kết hợp email/mật khẩu không hợp lệ"
-      logged_out: "Đã đăng xuất!"
-    please_login: "Vui lòng đăng nhập."
-  log_in: "Đăng nhập"
-  invalid_email_password_combination: "Kết hợp email/mật khẩu không hợp lệ"
+      title: 'Đăng nhập'
+      email: 'Email'
+      password: 'Mật khẩu'
+      remember_me: 'Nhớ tôi'
+      submit: 'Đăng nhập'
+      success: 'Đăng nhập thành công!'
+      invalid_credentials: 'Kết hợp email/mật khẩu không hợp lệ'
+      logged_out: 'Đã đăng xuất!'
+    please_login: 'Vui lòng đăng nhập.'
+  log_in: 'Đăng nhập'
+  invalid_email_password_combination: 'Kết hợp email/mật khẩu không hợp lệ'
+  account_activations:
+    success: 'Tài khoản đã được kích hoạt!'
+    invalid_link: 'Liên kết kích hoạt không hợp lệ'
+  mailers:
+    user_mailer:
+      account_activation:
+        subject: 'Kích hoạt tài khoản'
+        greeting: 'Xin chào %{name},'
+        instruction: 'Vui lòng nhấp vào liên kết dưới đây để kích hoạt tài khoản của bạn:'
+        activate: 'Kích hoạt'

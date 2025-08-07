@@ -22,9 +22,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      redirect_to @user, notice: t("users.create.success")
+      @user.send_activation_email
+      flash[:info] = t("users.create.activation_email_sent", default: "Please check your email to activate your account.")
+      redirect_to root_url
     else
+      flash[:danger] = t("users.new.errors_count", count: @user.errors.count, default: "%{count} errors:")
       render :new, status: :unprocessable_entity
     end
   end

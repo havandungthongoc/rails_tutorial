@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_secure_password
   before_save :downcase_email
+  before_create :create_activation_digest
 
   validates :name, presence: true,
                    length: {maximum: MAX_NAME_LENGTH}
@@ -20,26 +21,40 @@ class User < ApplicationRecord
 
   scope :recent, ->{order(created_at: :desc)}
 
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :activation_token
 
   def remember
     self.remember_token = SecureRandom.urlsafe_base64
     update_attribute(:remember_digest, Digest::SHA1.hexdigest(remember_token))
   end
 
-  def authenticated? remember_token
-    return false if remember_digest.nil?
-
-    Digest::SHA1.hexdigest(remember_token) == remember_digest
+  def authenticated?(attribute, token)
+    digest = send("#{attribute}_digest")
+    return false if digest.nil?
+    
+    Digest::SHA1.hexdigest(token) == digest
   end
 
   def forget
     update_column(:remember_digest, nil)
   end
 
+  def activate
+    update_columns(activated: true, activated_at: Time.zone.now)
+  end
+
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
+  end
+
   private
 
   def downcase_email
     self.email = email.downcase
+  end
+
+  def create_activation_digest
+    self.activation_token = SecureRandom.urlsafe_base64
+    self.activation_digest = Digest::SHA1.hexdigest(activation_token)
   end
 end
