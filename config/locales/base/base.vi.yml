@@ -39,6 +39,27 @@ vi:
       previous: "Trang trước"
       next: "Trang sau"
       page: "Trang %{current} / %{total}"
+      activated: "Trạng thái kích hoạt"
+      activated_true: "Đã kích hoạt"
+      activated_false: "Chưa kích hoạt"
+      activate: "Kích hoạt"
+      no_activation_token: "Không có token kích hoạt"
+      clear: "Xóa" # Thêm cho nút xóa (nếu dùng)
+    index:
+      title: "Tất cả người dùng"
+      name: "Tên"
+      email: "Email"
+      actions: "Hành động"
+      show: "Xem"
+      edit: "Chỉnh sửa"
+      delete: "Xóa"
+      confirm_delete: "Bạn có chắc muốn xóa người dùng này?"
+      new_user: "Tạo người dùng mới"
+      search: "Tìm kiếm"
+      search_placeholder: "Tìm kiếm theo tên hoặc email"
+      previous: "Trang trước"
+      next: "Trang sau"
+      page: "Trang %{current} / %{total}"
     new:
       title: "Đăng ký"
       name: "Tên"
@@ -49,6 +70,18 @@ vi:
       success: "Đăng ký thành công!"
       errors_count: "%{count} lỗi:"
       login: "Đăng nhập"
+    create:
+      success: "Tạo tài khoản thành công!"
+      activation_email_sent: "Vui lòng kiểm tra email để kích hoạt tài khoản của bạn."
+    update:
+      success: "Cập nhật hồ sơ thành công!"
+      failed: "Cập nhật hồ sơ thất bại. Vui lòng kiểm tra lại."
+    destroy:
+      success: "Xóa người dùng thành công!"
+      failed: "Không thể xóa người dùng."
+    not_found: "Không tìm thấy người dùng."
+    access_denied: "Bạn không có quyền chỉnh sửa tài khoản này."
+    admin_only: "Chỉ quản trị viên mới có thể thực hiện hành động này."
     create:
       success: "Tạo tài khoản thành công!"
     update:
@@ -70,6 +103,24 @@ vi:
       success: "Đăng nhập thành công!"
       invalid_credentials: "Kết hợp email/mật khẩu không hợp lệ"
       logged_out: "Đã đăng xuất!"
+    create:
+      account_not_activated: "Tài khoản chưa được kích hoạt. Vui lòng kiểm tra email để nhận liên kết kích hoạt."
+    please_login: "Vui lòng đăng nhập."
+  account_activations:
+    success: "Tài khoản đã được kích hoạt!"
+    invalid_link: "Liên kết kích hoạt không hợp lệ"
     please_login: "Vui lòng đăng nhập."
   log_in: "Đăng nhập"
   invalid_email_password_combination: "Kết hợp email/mật khẩu không hợp lệ"
+  mailers:
+    user_mailer:
+      account_activation:
+        subject: "Kích hoạt tài khoản"
+        greeting: "Xin chào %{name},"
+        instruction: "Vui lòng nhấp vào liên kết dưới đây để kích hoạt tài khoản của bạn:"
+        activate: "Kích hoạt"
+  account_activations:
+    success: "Tài khoản đã được kích hoạt!"
+    invalid_token: "Token kích hoạt không hợp lệ"
+    user_not_found: "Không tìm thấy người dùng"
+    already_activated: "Tài khoản đã được kích hoạt trước đó"

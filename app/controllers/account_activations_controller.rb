@@ -3,12 +3,11 @@ class AccountActivationsController < ApplicationController
   before_action :check_authentication, only: [:edit]
   before_action :check_activation, only: [:edit]
 
-  # Activate user account and log them in
   def edit
-    @user.activate
-    log_in @user
+    user.activate
+    log_in user
     flash[:success] = t("account_activations.success")
-    redirect_to @user
+    redirect_to user
   end
 
   private
@@ -33,5 +32,9 @@ class AccountActivationsController < ApplicationController
 
     redirect_to(root_url,
                 flash: {warning: t("account_activations.already_activated")})
+  end
+
+  def log_in user
+    session[:user_id] = user.id
   end
 end

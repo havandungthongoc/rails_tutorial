@@ -1,0 +1,4 @@
+<%= t("mailers.user_mailer.account_activation.greeting", name: @user.name) %>
+
+<%= t("mailers.user_mailer.account_activation.instruction") %>
+<%= edit_account_activation_url(@user.activation_token, email: @user.email, locale: I18n.locale) %>

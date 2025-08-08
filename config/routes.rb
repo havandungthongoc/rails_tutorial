@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     delete "/logout", to: "sessions#destroy", as: :logout
 
     resources :users
+    resources :account_activations, only: [:edit]
   end
 
   get "/", to: redirect("/vi")
